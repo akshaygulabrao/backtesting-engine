@@ -1,16 +1,18 @@
 # Algorithmic Trading Backtesting Engine
-Backtesting is a part of trading algorithm development used to test the performance of algorithms in custom scenarios.
+Backtesting is a part of trading algorithm development used to test the performance of algorithms in custom scenarios. This project is designed to imitate the [LEAN backtesting engine](https://github.com/QuantConnect/Lean). The general architecture of lean is
 
-This backtesting engine supports:
-- streaming multiple assets through [ZMQ](https://github.com/zeromq)
-- a realtime GUI to visualize algorithm state using Qt5
+![LEAN arch](/images/image.png)
 
-The project is an educational exercise in C++ to demonstrate capability in:
+The idea is to make a far simpler version of LEAN to demonstrate C++ capability in:
 - GUI development
 - Parallel Processing
 - Smart Memory Management
 - CMake Build System Generator
 
+
+This backtesting engine supports:
+- streaming multiple assets at the same time through [ZMQ](https://github.com/zeromq)
+- a realtime GUI to visualize algorithm state using Qt5
 
 ## Installation
 
