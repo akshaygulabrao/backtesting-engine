@@ -3,6 +3,7 @@
 #include <set>
 #include <chrono>
 #include <string>
+#include <thread>
 #include <stdexcept>
 #include <unordered_set>
 #include "../include/world.h"
@@ -18,8 +19,8 @@ void World::validate_tickers(const std::vector<std::string>& tickers) {
 
 void World::validate_resolution(const std::vector<int>& resolutions) {
     for (size_t i = 0; i < resolutions.size(); i++) {
-        if (resolutions[i] <= 0) {
-            throw std::invalid_argument("Resolution must be greater than 0");
+        if (resolutions[i] < -1) {
+            throw std::invalid_argument("Resolution must be greater or equal to -1");
         }
     }
 }
@@ -64,6 +65,15 @@ World::World(std::vector<std::string> tickers, std::vector<int> resolutions) {
     }
 }
 
+void World::prepare() {
+    std::cout << "Preparing" << std::endl;
+
+}
+
 void World::run() {
     std::cout << "Running" << std::endl;
+    for(int i = 0; i < 10; i++) {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::cout << "Tick" << std::endl;
+    }
 }

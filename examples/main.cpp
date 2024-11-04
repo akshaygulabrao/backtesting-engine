@@ -3,7 +3,8 @@
 #include <string>
 
 int main(){
-    World world({"AAPL", "GOOG"}, {1, 5});
+    // -1 means tick data
+    World world({"AAPL", "GOOG"}, {-1, -1});
 
     world.print();
 

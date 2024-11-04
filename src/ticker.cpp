@@ -7,4 +7,4 @@ bool Ticker::operator<(const Ticker& other) const {
 }
 bool Ticker::operator==(const Ticker& other) const {
     return symbol == other.symbol && resolution == other.resolution;
-} // End of Ticker::operator== function
+}

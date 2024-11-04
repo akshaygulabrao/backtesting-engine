@@ -18,6 +18,15 @@ This backtesting engine supports:
 
 ## Usage
 
+
+## Event Flow
+The event loop that I am trying to implement is located [here](https://www.quantconnect.com/docs/v2/writing-algorithms/key-concepts/algorithm-engine#06-Event-Flow).
+
+1. Check for Scheduled Events
+2. Update Algorithm Time
+3. Update Current Slice
+4. Pass Slice to update
+
 ## Contributions
 This project is intended for personal educational use, and contributions are currently not sought.
 
